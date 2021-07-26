@@ -108,5 +108,6 @@ export default {
 .footer {
   position: fixed;
   top: 0;
+  font-size: 10px;
 }
 </style>
