@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="loadPost()">Load posts</button>
-        <h1 v-for="post in posts" :key="post">{{post.id}}</h1>
+        <h1 v-for="post in posts" :key="post"></h1>
     </div>
 </template>
 
