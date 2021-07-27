@@ -90,6 +90,7 @@ export default {
     },
     reset() {
       this.isShowing = false;
+      this.isNameDisplayed = true;
     },
   },
 };
