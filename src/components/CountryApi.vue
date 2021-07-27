@@ -48,7 +48,7 @@
 
     <!-- footer div  -->
     <div>
-      <div class="footer text-sm ml-1 mb-1 hidden:block-sm">
+      <div class="footer text-sm ml-1 mb-1 hidden:block-sm" v-if="isNameDisplayed">
          <h6>Follow me on Github</h6>
          <h6>Username : AkashKumarMahala</h6>
       </div>
@@ -65,6 +65,7 @@ export default {
     return {
       countryData: [],
       isShowing: false,
+      isNameDisplayed: true,
       countryName: "",
     };
   },
@@ -72,6 +73,8 @@ export default {
   methods: {
     fetchData() {
       if (this.countryName != "") {
+        this.isShowing = true;
+        this.isNameDisplayed = false;
         axios
           .get(`https://restcountries.eu/rest/v2/name/${this.countryName}`)
           .then((res) => {
@@ -80,7 +83,6 @@ export default {
           .catch((err) => {
             console.log(`Error is ${err}`);
           });
-        this.isShowing = true;
       }
     },
     popout() {
@@ -107,7 +109,7 @@ export default {
 }
 .footer {
   position: fixed;
-  top: 0;
+  bottom: 0;
   font-size: 10px;
 }
 </style>
