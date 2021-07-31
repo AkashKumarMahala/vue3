@@ -1,9 +1,9 @@
 <template>
-<div class="w-full flex justify-center flex-wrap">
+<div class="w-full flex justify-center flex-wrap mt-6">
     <div class="w-full text-center mb-4 text-2xl font-semibold">Markdown app</div>
     <div class="w-4/5 border border-gray-500 flex">
         <div class="w-1/2 h-72 border-r border-gray-500">
-            <textarea class="w-full h-full p-2" :value="textbox" @input="update"></textarea>
+            <textarea ref="markdownRef" class="w-full h-full p-2" :value="textbox" @input="update"></textarea>
         </div>
         <div class="w-1/2 h-72 bg-gray-100 p-2" v-html="markedText"></div>
     </div>
@@ -19,6 +19,9 @@ export default {
       textbox: "",
       timeout: "",
     };
+  },
+  mounted() {
+    this.$refs.markdownRef.focus();
   },
   methods: {
     update(e) {

@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="flex justify-center w-full mt-6">
+      <div>
         <h1 class="text-2xl font-semibold text-center mb-4">Vue Calender</h1>
           <div class="flex justify-between my-2">
               <h1 class="text-xl font-semibold">{{currMonth}}</h1>
@@ -19,6 +20,7 @@
             <button class="bg-red-400 text-white px-2" @click="gotoPrev()">Prev</button>
             <button class="bg-red-400 text-white px-2" @click="gotoNext()">Next</button>
         </div>
+    </div>
     </div>
 </template>
 
