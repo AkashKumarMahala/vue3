@@ -5,7 +5,8 @@ import Calender from './Pages/Calender.vue';
 import Carousel from './Pages/Carousel.vue';
 import Markdown from './Pages/Markdown.vue';
 import Calculator from './Pages/Calculator.vue';
-import ReusableModal from './components/ReusableModal'
+import ReusableModal from './components/ReusableModal.vue';
+import CountryApi from './Pages/CountryApi.vue'
 // import Login from './Pages/Login.vue'
 
 
@@ -16,6 +17,7 @@ const routes=[
     { path:"/markdown", component: Markdown },
     { path:"/calculator", component: Calculator },
     { path:"/reusable-modal", component: ReusableModal },
+    { path:"/country-api", component: CountryApi },
     // { path:'/login', component: Login}
 ];
 

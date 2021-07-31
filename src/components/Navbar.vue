@@ -28,6 +28,7 @@ export default {
         { name: "Carousel", link: "/slider-carousel" },
         { name: "Calculator", link: "/calculator" },
         { name: "Modal", link: "/reusable-modal" },
+        { name: "CountryAPI", link: "/country-api" },
       ],
     };
   },

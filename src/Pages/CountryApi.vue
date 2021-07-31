@@ -1,5 +1,5 @@
 <template>
-<div class="body">
+<div class="">
   <div>
     <!-- search div  -->
      <div class="text-center mt-1">
@@ -18,7 +18,7 @@
     <!-- !search div  -->
    
     <!-- Card div  -->
-    <div class="flex justify-center mt-10 mb-5" v-if="isShowing">
+    <div class="flex justify-center mt-10 mb-5 w-full" v-if="isShowing">
         <div class="md:w-1/2 lg:w-1/3 border card pt-3 rounded-md ">
             <div v-for="data in countryData" :key="data">
                <div class="text-center">
@@ -47,12 +47,7 @@
     <!-- !Card div  -->
 
     <!-- footer div  -->
-    <div>
-      <div class="footer text-sm ml-1 mb-1 hidden:block-sm" v-if="isNameDisplayed">
-         <h6>Follow me on Github</h6>
-         <h6>Username : AkashKumarMahala</h6>
-      </div>
-    </div>
+  
     <!-- !footer div  -->
 </div>
 </div>
@@ -85,9 +80,6 @@ export default {
           });
       }
     },
-    popout() {
-      // transition: translateZ("200px");
-    },
     reset() {
       this.isShowing = false;
       this.isNameDisplayed = true;
@@ -97,20 +89,11 @@ export default {
 </script>
 
 <style scoped>
-.body {
-  margin: 0px;
-  padding: 0px;
-}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-}
-.footer {
-  position: fixed;
-  bottom: 0;
-  font-size: 10px;
 }
 </style>

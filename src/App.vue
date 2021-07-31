@@ -1,7 +1,7 @@
 <template>
 <div>
   <Navbar :isLoggedIn="isLoggedIn" @open-login-modal="isShowing=true"/>
-  <div class="outer-box flex">
+  <div>
   <router-view></router-view>
   </div>
   <Login v-if="isShowing" @close-login="isShowing= false"/>
